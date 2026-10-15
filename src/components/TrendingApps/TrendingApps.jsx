@@ -11,7 +11,7 @@ const TrendingApps = ({ appsData }) => {
         Explore All Trending Apps on the Market developed by us
       </p>
 
-      <div className="grid grid-cols-4 gap-4 max-w-[1440px] mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-[1440px] mx-auto">
         {[...appsData]
           .sort((a, b) => b.downloads - a.downloads)
           .slice(0, 8)
