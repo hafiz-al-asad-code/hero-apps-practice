@@ -3,7 +3,7 @@ import AppCard from "../AppCard/AppCard";
 
 const TrendingApps = ({ appsData }) => {
   return (
-    <div>
+    <div className="px-2.5 lg:px-0">
       <h1 className="text-[48px] text-center font-bold text-[#001931] mt-[80px]">
         Trending Apps
       </h1>
