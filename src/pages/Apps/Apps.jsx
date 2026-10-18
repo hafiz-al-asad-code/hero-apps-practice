@@ -5,7 +5,6 @@ import AppCard from "../../components/AppCard/AppCard";
 
 const Apps = () => {
   const appsData = useLoaderData();
-  console.log(appsData);
 
   return (
     <div className="mb-[80px] max-w-[1440px] mx-auto px-2.5 lg:px-0">
@@ -35,7 +34,7 @@ const Apps = () => {
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {appsData.map((app) => (
-          <AppCard app={app}></AppCard>
+          <AppCard key={app.id} app={app}></AppCard>
         ))}
       </div>
     </div>

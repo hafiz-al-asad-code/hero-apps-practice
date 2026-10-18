@@ -1,5 +1,6 @@
 import React from "react";
 import AppCard from "../AppCard/AppCard";
+import { Link } from "react-router";
 
 const TrendingApps = ({ appsData }) => {
   return (
@@ -20,11 +21,12 @@ const TrendingApps = ({ appsData }) => {
           ))}
       </div>
 
-      <div className="text-center">
-        <button className="text-white font-semibold py-[14.5px] px-[39px] mt-[40px] mb-[80px] bg-linear-to-br from-[#632EE3] to-[#9F62F2] rounded-[4px] cursor-pointer">
-          Show All
-        </button>
-      </div>
+      <Link
+        to="/apps"
+        className="text-white font-semibold py-[14.5px] px-[39px] mt-[40px] mb-[80px] bg-linear-to-br from-[#632EE3] to-[#9F62F2] rounded-[4px] cursor-pointer block w-fit mx-auto"
+      >
+        Show All
+      </Link>
     </div>
   );
 };
