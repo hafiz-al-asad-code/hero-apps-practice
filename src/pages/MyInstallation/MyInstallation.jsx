@@ -50,7 +50,7 @@ const MyInstallation = () => {
   };
 
   return (
-    <div className="max-w-[1440px] mx-auto mb-[80px]">
+    <div className="max-w-[1440px] mx-auto mb-[80px] px-2.5 lg:px-0">
       <h1 className="text-[48px] text-center font-bold text-[#001931]">
         Your Installed Apps
       </h1>
@@ -58,8 +58,8 @@ const MyInstallation = () => {
         Explore All Trending Apps on the Market developed by us
       </p>
 
-      <div className="flex md:flex-row items-center justify-between mb-4">
-        <span className="text-2xl font-semibold text-[#001931]">
+      <div className="flex flex-col md:flex-row items-center justify-between mb-4">
+        <span className="text-2xl font-semibold text-[#001931] mb-4">
           ({installedAppFromLS.length}) Apps Found
         </span>
 
@@ -103,7 +103,6 @@ const MyInstallation = () => {
             key={app.id}
             app={app}
             handleUninstall={handleUninstall}
-            // setInstalledAppFromLS={setInstalledAppFromLS}
           ></InstalledAppsCard>
         ))}
       </div>

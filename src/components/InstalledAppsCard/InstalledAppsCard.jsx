@@ -5,7 +5,7 @@ import { removeAppFromLS } from "../../utility/storeAppToLocalStorage";
 
 const InstalledAppsCard = ({ app, handleUninstall }) => {
   return (
-    <div className="flex justify-between items-center p-4 rounded-[4px] bg-white shadow-sm">
+    <div className="md:flex justify-between items-center p-4 rounded-[4px] bg-white shadow-sm">
       {/* left */}
       <div className="flex items-center gap-4">
         <img
@@ -42,7 +42,7 @@ const InstalledAppsCard = ({ app, handleUninstall }) => {
       <div>
         <button
           onClick={() => handleUninstall(app.id)}
-          className="font-semibold py-3 px-4 rounded-[4px] bg-[#00D390] text-white"
+          className="mt-4 md:mt-0 w-full md:w-fit font-semibold py-3 px-4 rounded-[4px] bg-[#00D390] text-white cursor-pointer"
         >
           Uninstall
         </button>
