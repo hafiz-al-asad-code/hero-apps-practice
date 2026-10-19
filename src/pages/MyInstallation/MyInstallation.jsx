@@ -10,6 +10,7 @@ import { toast } from "react-toastify";
 
 const MyInstallation = () => {
   const [installedAppFromLS, setInstalledAppFromLS] = useState([]);
+  const [sort, setSort] = useState("");
   const appsData = useLoaderData();
 
   useEffect(() => {
@@ -39,6 +40,13 @@ const MyInstallation = () => {
       );
       setInstalledAppFromLS(sortByDownloadHighToLow);
     }
+
+    if (type === "lowToHigh") {
+      const sortByDownloadLowToHigh = [...installedAppFromLS].sort(
+        (a, b) => a.downloads - b.downloads,
+      );
+      setInstalledAppFromLS(sortByDownloadLowToHigh);
+    }
   };
 
   return (
@@ -62,16 +70,26 @@ const MyInstallation = () => {
               role="button"
               className="flex items-center gap-2.5 bg-white shadow-sm border border-[#D2D2D2] rounded-[4px] px-4 py-3 text-[#627382]"
             >
-              Sort By Download <BiSolidDownArrow />
+              Sort By Download {sort ? `: ${sort}` : ""} <BiSolidDownArrow />
             </div>
             <ul
               tabIndex={-1}
               className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
             >
-              <li onClick={() => handleSort("highToLow")}>
+              <li
+                onClick={() => {
+                  handleSort("highToLow");
+                  setSort("High-Low");
+                }}
+              >
                 <a>High-Low</a>
               </li>
-              <li onClick={() => handleSort("lowToHigh")}>
+              <li
+                onClick={() => {
+                  handleSort("lowToHigh");
+                  setSort("Low-High");
+                }}
+              >
                 <a>Low-High</a>
               </li>
             </ul>
