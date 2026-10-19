@@ -1,10 +1,28 @@
 import { Search } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 import { useLoaderData } from "react-router";
 import AppCard from "../../components/AppCard/AppCard";
+import AppNotFound from "../../components/AppNotFound/AppNotFound";
 
 const Apps = () => {
   const appsData = useLoaderData();
+  const [appsDataState, setAppsDataState] = useState(appsData);
+  const [searchText, setSearchText] = useState("");
+
+  const handleSearch = (e) => {
+    const inputValue = e.target.value.trim().toLowerCase();
+
+    const filteredAppByTitle = appsData.filter((app) =>
+      app.title.toLowerCase().includes(inputValue),
+    );
+
+    setAppsDataState(filteredAppByTitle);
+  };
+
+  const handleClearSearchInputField = () => {
+    setSearchText("");
+    setAppsDataState(appsData);
+  };
 
   return (
     <div className="mb-[80px] max-w-[1440px] mx-auto px-2.5 lg:px-0">
@@ -15,13 +33,18 @@ const Apps = () => {
         Explore All Apps on the Market developed by us. We code for Millions
       </p>
 
-      <div className="md:flex items-center justify-between mb-4">
-        <span className="text-2xl font-semibold text-[#001931]">
-          ({appsData.length}) Apps Found
+      <div className="flex flex-col md:flex-row items-center justify-between mb-4">
+        <span className="text-2xl font-semibold text-[#001931] mb-4 md:mb-0">
+          ({appsDataState.length}) Apps Found
         </span>
 
         <div className="relative">
           <input
+            onChange={(e) => {
+              handleSearch(e);
+              setSearchText(e.target.value);
+            }}
+            value={searchText}
             type="search"
             name=""
             id=""
@@ -32,11 +55,17 @@ const Apps = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {appsData.map((app) => (
-          <AppCard key={app.id} app={app}></AppCard>
-        ))}
-      </div>
+      {appsDataState.length === 0 ? (
+        <AppNotFound
+          handleClearSearchInputField={handleClearSearchInputField}
+        ></AppNotFound>
+      ) : (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {appsDataState.map((app) => (
+            <AppCard key={app.id} app={app}></AppCard>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
