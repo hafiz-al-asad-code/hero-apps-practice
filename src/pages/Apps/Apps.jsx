@@ -3,25 +3,39 @@ import React, { useState } from "react";
 import { useLoaderData } from "react-router";
 import AppCard from "../../components/AppCard/AppCard";
 import AppNotFound from "../../components/AppNotFound/AppNotFound";
+import Loader from "../../components/Loader/Loader";
 
 const Apps = () => {
   const appsData = useLoaderData();
   const [appsDataState, setAppsDataState] = useState(appsData);
   const [searchText, setSearchText] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSearch = (e) => {
     const inputValue = e.target.value.trim().toLowerCase();
 
-    const filteredAppByTitle = appsData.filter((app) =>
-      app.title.toLowerCase().includes(inputValue),
-    );
+    setSearchText(e.target.value);
 
-    setAppsDataState(filteredAppByTitle);
+    setIsLoading(true);
+
+    setTimeout(() => {
+      const filteredAppByTitle = appsData.filter((app) =>
+        app.title.toLowerCase().includes(inputValue),
+      );
+
+      setAppsDataState(filteredAppByTitle);
+      setIsLoading(false);
+    }, 500);
   };
 
   const handleClearSearchInputField = () => {
     setSearchText("");
-    setAppsDataState(appsData);
+    setIsLoading(true);
+
+    setTimeout(() => {
+      setAppsDataState(appsData);
+      setIsLoading(false);
+    }, 500);
   };
 
   return (
@@ -42,7 +56,6 @@ const Apps = () => {
           <input
             onChange={(e) => {
               handleSearch(e);
-              setSearchText(e.target.value);
             }}
             value={searchText}
             type="search"
@@ -55,7 +68,9 @@ const Apps = () => {
         </div>
       </div>
 
-      {appsDataState.length === 0 ? (
+      {isLoading ? (
+        <Loader></Loader>
+      ) : appsDataState.length === 0 ? (
         <AppNotFound
           handleClearSearchInputField={handleClearSearchInputField}
         ></AppNotFound>
