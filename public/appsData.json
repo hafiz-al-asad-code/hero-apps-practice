@@ -1,6 +1,6 @@
 [
   {
-    "image": "https://placehold.co/200x200?text=Spotify",
+    "image": "https://i.ibb.co.com/kpCZz4g/spotify.png",
     "title": "Spotify Music",
     "companyName": "Spotify AB",
     "id": 1,
@@ -18,7 +18,7 @@
     ]
   },
   {
-    "image": "https://placehold.co/200x200?text=Instagram",
+    "image": "https://i.ibb.co.com/rfXMm4xZ/social-1.png",
     "title": "Instagram",
     "companyName": "Meta Platforms",
     "id": 2,
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "image": "https://placehold.co/200x200?text=WhatsApp",
+    "image": "https://i.ibb.co.com/QvVSCWg1/whatsapp.png",
     "title": "WhatsApp Messenger",
     "companyName": "WhatsApp LLC",
     "id": 3,
@@ -54,7 +54,7 @@
     ]
   },
   {
-    "image": "https://placehold.co/200x200?text=YouTube",
+    "image": "https://i.ibb.co.com/k2M7Yk2N/youtube.png",
     "title": "YouTube",
     "companyName": "Google LLC",
     "id": 4,
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "image": "https://placehold.co/200x200?text=Netflix",
+    "image": "https://i.ibb.co.com/9Hnmm9SK/netflix.png",
     "title": "Netflix",
     "companyName": "Netflix Inc.",
     "id": 5,
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "image": "https://placehold.co/200x200?text=Telegram",
+    "image": "https://i.ibb.co.com/gb2688nn/telegram.png",
     "title": "Telegram",
     "companyName": "Telegram FZ-LLC",
     "id": 6,
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "image": "https://placehold.co/200x200?text=TikTok",
+    "image": "https://i.ibb.co.com/h1Jsg2Jw/tiktok.png",
     "title": "TikTok",
     "companyName": "TikTok Pte. Ltd.",
     "id": 7,
@@ -126,7 +126,7 @@
     ]
   },
   {
-    "image": "https://placehold.co/200x200?text=Google+Maps",
+    "image": "https://i.ibb.co.com/Tqbb72nh/google-maps.png",
     "title": "Google Maps",
     "companyName": "Google LLC",
     "id": 8,
@@ -144,7 +144,7 @@
     ]
   },
   {
-    "image": "https://placehold.co/200x200?text=Duolingo",
+    "image": "https://i.ibb.co.com/Zp3rqcZC/duolingo-seeklogo.png",
     "title": "Duolingo",
     "companyName": "Duolingo Inc.",
     "id": 9,
@@ -162,7 +162,7 @@
     ]
   },
   {
-    "image": "https://placehold.co/200x200?text=Canva",
+    "image": "https://i.ibb.co.com/jv22y9Pf/canva-app.jpg",
     "title": "Canva",
     "companyName": "Canva Pty Ltd",
     "id": 10,
@@ -180,7 +180,7 @@
     ]
   },
   {
-    "image": "https://placehold.co/200x200?text=Snapchat",
+    "image": "https://i.ibb.co.com/KxDmZ7Xj/snapchat-square.png",
     "title": "Snapchat",
     "companyName": "Snap Inc.",
     "id": 11,
@@ -198,7 +198,7 @@
     ]
   },
   {
-    "image": "https://placehold.co/200x200?text=Zoom",
+    "image": "https://i.ibb.co.com/LTZSJfD/zoom.png",
     "title": "Zoom Workplace",
     "companyName": "Zoom Communications",
     "id": 12,
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "image": "https://placehold.co/200x200?text=Amazon",
+    "image": "https://i.ibb.co.com/sp33WsPH/amazon-pay.png",
     "title": "Amazon Shopping",
     "companyName": "Amazon Mobile LLC",
     "id": 13,
@@ -234,7 +234,7 @@
     ]
   },
   {
-    "image": "https://placehold.co/200x200?text=Uber",
+    "image": "https://i.ibb.co.com/Y7rJKq67/uber.png",
     "title": "Uber",
     "companyName": "Uber Technologies",
     "id": 14,
@@ -252,7 +252,7 @@
     ]
   },
   {
-    "image": "https://placehold.co/200x200?text=Google+Drive",
+    "image": "https://i.ibb.co.com/0R0RTcPJ/google-drive.png",
     "title": "Google Drive",
     "companyName": "Google LLC",
     "id": 15,
@@ -270,7 +270,7 @@
     ]
   },
   {
-    "image": "https://placehold.co/200x200?text=Discord",
+    "image": "https://i.ibb.co.com/spQdVbwS/discord-logo-png-seeklogo-275121.png",
     "title": "Discord",
     "companyName": "Discord Inc.",
     "id": 16,
@@ -288,7 +288,7 @@
     ]
   },
   {
-    "image": "https://placehold.co/200x200?text=Shazam",
+    "image": "https://i.ibb.co.com/fV1mYJzn/images.jpg",
     "title": "Shazam",
     "companyName": "Apple Inc.",
     "id": 17,
@@ -306,7 +306,7 @@
     ]
   },
   {
-    "image": "https://placehold.co/200x200?text=Notion",
+    "image": "https://i.ibb.co.com/spz1hwVy/Notion-app-logo.png",
     "title": "Notion",
     "companyName": "Notion Labs Inc.",
     "id": 18,
@@ -324,7 +324,7 @@
     ]
   },
   {
-    "image": "https://placehold.co/200x200?text=Khan+Academy",
+    "image": "https://i.ibb.co.com/hRWkjK4x/khan-academy.webp",
     "title": "Khan Academy",
     "companyName": "Khan Academy",
     "id": 19,
@@ -342,7 +342,7 @@
     ]
   },
   {
-    "image": "https://placehold.co/200x200?text=CapCut",
+    "image": "https://i.ibb.co.com/fYycnTjj/capcut.webp",
     "title": "CapCut",
     "companyName": "Bytedance Pte. Ltd.",
     "id": 20,
